@@ -36,22 +36,13 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     flex: "50%",
   },
-  // bullet: {
-  //   display: "inline",
-  //   margin: "0 2px",
-  //   transform: "scale(0.8)",
-  // },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
-  },
+
   btn: {
     margin: theme.spacing(4),
     textDecoration: "none",
     padding: "10px",
     backgroundColor: "#fff",
+    borderRadius: "50%",
   },
 }));
 function CounterContent(props) {
@@ -66,7 +57,7 @@ function CounterContent(props) {
       clearInterval(counts);
     };
   }, [countState]);
-  console.log("Memo Rendered");
+
   return (
     <div>
       <Card className={classes.root} variant="outlined">

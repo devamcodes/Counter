@@ -33,7 +33,6 @@ const Header = () => {
   );
 };
 function App() {
-  console.log("App rendered");
   return (
     <div className="App">
       <Header />
