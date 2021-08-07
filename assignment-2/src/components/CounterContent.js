@@ -7,44 +7,6 @@ import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     minWidth: 275,
-//     display: "inline",
-//     flexDirection: "row",
-//     order: 3,
-//     marginTop: theme.spacing(5),
-
-//     // paddingTop: theme.spacing(8),
-//     // paddingBottom: theme.spacing(8),
-//   },
-//   card: {
-//     width: "100%",
-//     height: "auto",
-//     display: "flex",
-//     padding: "10px",
-//     margin: "5px",
-//     flexWrap: "Wrap",
-//     backgroundColor: "lightGrey",
-//   },
-
-//   cardContent: {
-//     flexGrow: 1,
-//     textAlign: "left",
-//     paddingLeft: "30px",
-//     margin: "5px",
-//     flexDirection: "column",
-//     flex: "50%",
-//   },
-
-//   btn: {
-//     margin: theme.spacing(4),
-//     textDecoration: "none",
-//     padding: "10px",
-//     backgroundColor: "#fff",
-//     borderRadius: "50%",
-//   },
-// }));
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
     paddingTop: theme.spacing(8),
@@ -80,11 +42,11 @@ function CounterContent(props) {
   const [countState, setCountState] = useState(0);
 
   const id = [1, 2, 3, 4];
-  // console.log(props);
+
   useEffect(() => {
     const counts = setInterval(() => {
       setCountState(countState + 1);
-    }, 100);
+    }, 1);
     return () => {
       clearInterval(counts);
     };
@@ -92,19 +54,6 @@ function CounterContent(props) {
 
   return (
     <div>
-      {/* <Card className={classes.root} variant="outlined">
-        <Grid container spacing={4} grid-gutter-width="30 px" grid-columns="1">
-          <Card className={classes.card}>
-            <CardContent className={classes.cardContent}>
-              <Typography variant="h4" component="h1">
-                Counter:-
-                {props.id}
-              </Typography>
-            </CardContent>
-            <div className={classes.btn}>{countState}</div>
-          </Card>
-        </Grid>
-      </Card> */}
       <Container className={classes.cardGrid} maxWidth="md">
         <Grid container spacing={4}>
           {id.map((card) => (
