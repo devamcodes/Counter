@@ -9,6 +9,7 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    width: "100%",
   },
 
   title: {
@@ -32,6 +33,7 @@ const Header = () => {
   );
 };
 function App() {
+  console.log("App rendered");
   return (
     <div className="App">
       <Header />

@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     height: "auto",
     display: "flex",
     padding: "10px",
-    margin: "20px",
+    margin: "5px",
     flexWrap: "Wrap",
     backgroundColor: "lightGrey",
   },
@@ -66,6 +66,7 @@ function CounterContent(props) {
       clearInterval(counts);
     };
   }, [countState]);
+  console.log("Memo Rendered");
   return (
     <div>
       <Card className={classes.root} variant="outlined">
